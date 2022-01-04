@@ -1,0 +1,245 @@
+body{
+	font:12px "宋体";
+	text-align:center;
+	margin:0px;
+	background-color:#FFF;
+}
+#container{
+	height: auto;
+	width:1200px;
+	margin:0px auto;
+
+}
+#header{
+	width:100%;
+	margin:0px auto;
+
+}
+#menu{
+	width:100%;
+	height:74px;
+	margin:0px auto;
+
+}
+
+.lu-btn-3d{
+	width: 100px;
+	height: 40px;
+	background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%);
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	border-bottom: 5px solid #2b8bc6;
+	color: #fbfbfb;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 1px 1px 1px rgba(48, 114, 255, 0.4);
+	font-size: 15px;
+	text-align: center;
+	box-shadow: 0px 3px 0px rgba(72, 131, 255, 0.2);
+	cursor: pointer;
+}
+.lu-btn-3d:active {
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+	top: 1px;
+}
+.lu-a-3d{
+	background: linear-gradient(to bottom, #f00 0%,#ff9999 100%);
+	border-bottom: 5px solid #ff3300;
+	display: block;
+	width:100px;
+	line-height:40px;
+}
+#pagebody{
+	width:1200px;
+	height: 100%;
+	margin:5px auto;
+
+}
+#sidebar{
+	width:163px;
+	float:left;
+	background-color: white;
+}
+#login{
+	margin:10px 0px 0px 0px;
+
+}
+#mainbody{
+	text-align:left;
+	width:700px;
+    margin-left: 10px;
+	float:left;
+	background-color: white;
+	margin-bottom: 10px;
+	height:auto;
+
+}
+#mainfunction{
+	margin:10px 0px 0px 10px;
+}
+#footer {
+	width: 100%;
+	height: 40px;
+
+	background-color: #ffffff;
+	padding: 20px 0px 0px 0px;
+	font-weight: bolder;
+    position: relative;
+	bottom: 0;
+}
+
+
+#menu ul{
+	list-style:none;
+	float:right;
+	margin:25px 10px 0px 0px;
+	position: absolute;
+	text-align: center;
+}
+#menu ul li{
+	float:left;
+	margin:0 10px;
+	line-height:28px;
+
+}
+.menudiv{
+	width:2px;
+	height:28px;
+	background:#fbfbfb;
+}
+#menu ul li a:link,#menu ul li a:visited{
+	font-weight:bold;
+	color:#666;
+	text-decoration:none;
+	background-color:#efefef;
+}
+#menu ul li a:hover{
+
+
+}
+a:link,a:visited{
+	text-decoration:none;
+}
+a:hover{
+
+	color: #ff1a15;
+
+}
+#mainfunction img {
+	max-width: 480px;
+}
+.btn{
+
+	border-radius:8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+
+}
+.add {
+	margin: 20px auto;
+}
+.wrapper {
+	background: url("sky.jpeg") no-repeat center 0;
+	text-align: center;
+	width: 1000px;
+	height: 600px;
+	margin: 20px auto;
+}
+h2{
+	background-color:#7CCD7C;
+	margin:0px;
+	text-align:center;
+	font-family: "宋体", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+}
+.error {
+	color: #FF0000;
+}
+.add{
+	margin:20px auto;
+
+}
+.add1{
+	text-align: center;
+	background-color: 	#FFB6C1;
+	color: #fff;
+	margin:20px auto;
+	font-size: 20px;
+}
+a{
+	font-size: 20px;
+    color: #0C0C0C;
+	font-family: 微软雅黑;
+}
+#logo{
+text-align: left;
+}
+#logo img{
+	height: 80px;
+}
+#breadcrumb{
+	width: 100%;
+}
+#myCarousel{
+	width:300px;
+	height:400px;
+}
+.carousel{
+	width:300px;
+	float: right;
+}
+.carousel-caption{
+	font-size: 20px;
+}
+h4{
+	font-family: 黑体;
+}
+#pop-news{
+	font-size: 15px;
+}
+#breadcrumb ul li a{
+	font-size: 20px;
+	font-family: 幼圆;
+}
+
+.login a{
+	font-size: 15px;
+}
+.login{
+	width:200px;
+}
+.admin{
+	font-size: 15px;
+	color: #0e8fcb;
+}
+.search{
+	font-size: 20px;
+ }
+.adv{
+	margin-top: 100px;
+	width:300px;
+	float: right;
+}
+
+ #breadcrumb li:after{
+	content: "";
+	width: 0;
+	height: 5px;
+	background-color: #ff0033;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all 0.5s ease 0s;
+}
+#breadcrumb li:hover:after{
+	width: 100%;
+}
+
+
+
+
+.ad{
+	margin-top: 20px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户注册</title>
+    <link rel="stylesheet" href="../css/news.css" type="text/css">
+    <script type="text/javascript">
+        function checkName(){
+            var inputNode = document.getElementById("add_name");
+            var spanNode = document.getElementById("user_name");
+            var nameLength = document.getElementById("add_name").value.length;
+            //获取输入框的内容
+            var content = inputNode.value;
+            // 检测名字是否只包含字母数字下划线组成
+            var reg = /^[a-zA-Z0-9_\s]*$/;
+            if(content==""){
+                spanNode.innerHTML = "不能为空".fontcolor("red");
+                return false;
+            }
+            if(nameLength<3){
+                spanNode.innerHTML="请输入至少三位字母组成的用户名".fontcolor("red");//用户名过短检测
+                return false;
+            }
+            if (nameLength > 15) {
+                spanNode.innerHTML = "用户名长度过长".fontcolor("red");
+                return false;
+            }
+            if (reg.test(content)){//运用test()方法如果字符串中有匹配的值返回 true ，否则返回 false。
+                spanNode.innerHTML = "正确".fontcolor("green");
+                return true;
+            }else{
+                spanNode.innerHTML = "用户名只允许使用字母数字下划线组成".fontcolor("red");
+                return false;
+            }
+        }
+        //检查密码
+        function checkPassword(){
+            var password = document.getElementById("add_password");
+            var passwordLength = document.getElementById("add_password").value.length;
+            var content = password.value;
+            var spanNode = document.getElementById("user_password");
+            var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z][\s\S]{8,16}$/;//密码必须由8-16位数字和密码组成可以包含任意字符。
+            if (content== "") {
+                spanNode.innerHTML = "密码不能为空".fontcolor("red");
+                return false;
+            }
+            if (passwordLength > 30) {
+                spanNode.innerHTML = "密码过长".fontcolor("red");//密码长度控制
+                return false;
+            }
+            if(reg.test(content)==false) {
+
+                spanNode.innerHTML = "密码安全性过低，请使用8-16位数字和字母组成的密码".fontcolor("red");
+                return false;
+            }
+            else{
+                spanNode.innerHTML = "已填".fontcolor("green");
+                return true;
+            }
+
+        }
+        //检查再次输入的密码
+        function checkUpassword(){
+            var password = document.getElementById("add_password").value;
+            var upassword = document.getElementById("upassword").value;
+            var spanNode = document.getElementById("uupassword");
+            if (upassword != password) {
+                spanNode.innerHTML = "密码不一致".fontcolor("red");
+                return false;
+            }
+            if (upassword != "") {
+                spanNode.innerHTML = "已填".fontcolor("green");
+                return true;
+            }
+
+        }
+        function checkForm() {
+            var check_Name=checkName();
+            var check_Password=checkPassword();
+            var check_Upassword=checkUpassword();
+            if((check_Name) && (check_Password) && (check_Upassword)){
+                return true ;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper" style="border-radius: 10%">
+
+    <div class="add">
+        <label class="add1">注册新用户</label>
+    </div>
+    <div>
+        <form method="post" action="./register.php" onsubmit="return checkForm()" >
+            <a>用户名:</a><input type="text" name="add_name" id="add_name" placeholder="请设置用户名">
+            <span id="user_name" class="error">*</span><br><br>
+
+            <a>密码</a>:&nbsp<input type="password" name="add_password" id="add_password" placeholder="请设置密码">
+            <span id="user_password" class="error">*</span><br><br>
+
+            <a>确认密码:</a><input type="password" name="upassword" id="upassword" placeholder="请再次输入密码">
+            <span id="uupassword" class="error">*</span><br>
+
+           <input class="lu-btn-3d" type="submit" value="提交">
+           <input class="lu-btn-3d" type="reset" value="重填">
+        </form>
+    </div>
+ </div>
+</body>
+</html>
